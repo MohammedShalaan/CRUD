@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <section class=" bookmarker ">
+        <div class="container">
+            <div class=" d-flex justify-content-center align-items-center">
+                <h1 class=" py-5 ">Bookmarker</h1>
+            </div>
+
+
+            <div action="" class="form py-5 ">
+                <h2 class="text-center mb-4"> Bookmark your favorite sites </h2>
+                <!-- input site name  -->
+                <div class="mb-3">
+                    <label for="siteName " class="text-start pb-2 h6"> <i class="fa-solid fa-book-bookmark pe-2"></i>
+                        Site
+                        Name</label>
+                    <input type="text" id="siteName" class="form-control  py-2" placeholder="enter the note name ">
+                    <p class="text-danger d-none" id="alertSiteName">* Enter the name more than the three charachter</p>
+                </div>
+
+                <!-- input site url  -->
+                <div class="mb-3">
+                    <label for="siteUrl" class=" pb-2 h6"> <i class=" fa-solid fa-link pe-2"></i> Site URL</label>
+                    <input type="text" id="siteUrl" class="form-control  py-2 " placeholder="enter the note name ">
+                    <p class="text-danger d-none" id="alertSiteUrl">* enter site name start (www. or http or tttps )
+                    </p>
+                </div>
+
+                <!-- submit buttom  -->
+                <div class="d-flex justify-content-center align-content-center">
+                    <button type=" submit" class="btn btn-danger px-5 py-2" id="submit"> Submit </button>
+                </div>
+            </div>
+
+
+            <table class="table table-striped table-hover mt-4 text-center">
+                <thead>
+                    <tr>
+                        <th>Index</th>
+                        <th>Website Name</th>
+                        <th>Visit</th>
+                        <th>Delete</th>
+                    </tr>
+                </thead>
+
+                <tbody id="tabeladder">
+
+                </tbody>
+
+            </table>
+        </div>
+    </section>
+
+
+    <!-- Modal -->
+    <div class="modal fade " id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <div class="modal-title fs-5 h3 text-danger" id="staticBackdropLabel">warrining</div>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>enter the name </p>
+                    <p>enter the site url </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,67 @@
+:root {
+    --background-color: #f8ceb64d;
+    --background-color2: rgb(252, 156, 100);
+    --background-color3: rgb(255, 196, 0);
+
+}
+
+@font-face {
+    font-family: "theMainFont";
+    src: url(../webfonts/Pacifico-Regular.ttf);
+}
+
+body {
+    background-color: var(--background-color);
+}
+
+::selection {
+    color: black;
+    background: var(--background-color3);
+}
+
+h1 {
+    position: relative;
+    font-family: 'theMainFont', sans-serif;
+    font-size: 50px;
+    color: #352e28;
+    isolation: isolate;
+}
+
+
+
+h1::after {
+    position: absolute;
+    content: "";
+    width: 265px;
+    height: 20px;
+    background-color: var(--background-color3);
+    bottom: 50px;
+    left: 0px;
+    z-index: -1;
+    transition: 0.3s all ease-in-out;
+}
+
+h1:hover::after {
+
+    height: 40px;
+
+}
+
+h2 {
+    background-image: linear-gradient(to right, #3ca55c, #b5ac49);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.bookmarker .form {
+    /* background-color: var(--background-color); */
+    border-top: 3px dotted;
+    border-bottom: 3px dotted;
+}
+
+
+.form-control:focus {
+    border-color: #d99c39;
+    outline: 0;
+    box-shadow: 0 0 0 0.25rem #fec26055;
+}
